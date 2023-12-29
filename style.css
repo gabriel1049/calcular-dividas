@@ -1,0 +1,106 @@
+/* Estilo Geral e Cores */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilização dos Inputs e Botões */
+input[type="text"], input[type="number"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilização dos Cards de Dívida */
+#debtsContainer {
+    margin-top: 20px;
+}
+
+.debt-card {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #4CAF50;
+    animation: slideIn 0.3s ease-out;
+}
+
+.debt-card h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.debt-card .value {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 20px);
+    }
+
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+}
+
+/* Estilização do Total */
+#total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Botão de Limpar */
+#clearButton {
+    background-color: #f44336;
+    margin-top: 10px;
+}
+
+#clearButton:hover {
+    background-color: #e53935;
+}
